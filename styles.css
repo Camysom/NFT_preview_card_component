@@ -1,0 +1,142 @@
+:root {
+    --clr-primary-100: hsl(215, 51%, 70%);
+    --clr-active: hsl(178, 100%, 50%);
+    --clr-non-active: hsl(0, 0%, 100%);
+
+    --clr-maing-bg: hsl(217, 54%, 11%);
+    --clr-card-bg: hsl(216, 50%, 16%);
+    --clr-line: hsl(215, 32%, 27%);
+
+    --ff-font-primary: 'Outfit', sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-family: var(--ff-font-primary);
+    font-weight: 400;
+}
+
+
+body {
+    background-color: var(--clr-maing-bg);
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    padding: 1rem;
+}
+
+.wraper {
+    width: 360px;
+    background-color: var(--clr-card-bg);
+    padding: 1.5em;
+    border-radius: 1.2em;
+}
+
+img {
+    width: 100%;
+    border-radius: 1em;
+    position: relative;
+}
+
+.img_wraper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-active);
+    border-radius: 1.2em;
+}
+
+.eye {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.preview:hover {
+    opacity: 0.5;
+    transition: 0.2s;
+}
+
+.preview:hover + .eye {
+    opacity: 1;
+    transition: 0.2s;
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-non-active);
+}
+
+a:hover {
+    color: var(--clr-active);
+}
+
+p {
+    color: var(--clr-primary-100);
+    line-height: 1.4em;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.stats_box {
+    display: flex;
+    border-bottom: 1px solid var(--clr-line);
+}
+
+.price {
+    color: var(--clr-active);
+    position: relative;
+    padding-left: 1em;
+    padding-bottom: 1em;
+}
+
+.price::before {
+    content: url(images/icon-ethereum.svg);
+    position: absolute;
+    margin-left: -1em;
+    bottom: 0.85em;
+}
+
+.time {
+    margin-left: auto; 
+    position: relative;
+}
+
+.time::before {
+    content: url(images/icon-clock.svg);
+    position: absolute;
+    right: 5em;
+    bottom: 0.87em;
+}
+
+.author_box {
+    display: flex;
+    height: 3em;
+}
+
+.author_box > img {
+    width: 2em;
+    height: 2em;
+    margin-top: 1em;
+    border: 1px solid white;
+}
+
+.author {
+    margin-left: 0.8em;
+    padding-top: 0.2em;
+}
+
+.attribution {
+    position: fixed;
+    bottom: 0px;
+}
